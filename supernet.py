@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import sys
-
 '''
 This script will find the supernet for IP addresses inputted as sysarg.  
 For example, calling this script with arguments 10.0.0.1 and 10.0.1.1 will return 10.0.0.0/23
@@ -12,7 +11,6 @@ def decimal(x, mask):
 	dec = ''
 	for i in range(0,4):
 		octet = x[i*8:(i + 1) * 8]
-		print octet
 		dec = dec + str(int(octet, 2)) + '.' 
 	dec = dec[:len(dec)-1] 
 	return dec + '/' + str(mask)
