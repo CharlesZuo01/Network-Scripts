@@ -3,6 +3,7 @@
 '''
 This script will find the supernet for IP addresses inputted as sysarg.  
 For example, calling this script with arguments 10.0.0.1 and 10.0.1.1 will return 10.0.0.0/23
+This script does not do any error handling because it assumes the user knows how to input IP addresses.
 '''
 
 import sys
