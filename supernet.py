@@ -1,12 +1,12 @@
 #!/usr/bin/python
 
+import sys
+
 '''
 This script will find the supernet for IP addresses inputted as sysarg.  
 For example, calling this script with arguments 10.0.0.1 and 10.0.1.1 will return 10.0.0.0/23
 This script does not do any error handling because it assumes the user knows how to input IP addresses.
 '''
-
-import sys
 
 def decimal(x, mask):  
 	dec = ''
@@ -26,7 +26,6 @@ def binary(x):  #takes number and converts to 8 bit number
 ips = []
 for i in range(1, len(sys.argv)):
 	ips.append(str(sys.argv[i]))
-
 
 addr = []
 for i in ips:
@@ -55,6 +54,5 @@ for i in range(0, len(addr)-1):
 netbits = addr[0][:mask]
 while len(netbits) < 32:
 	netbits = netbits + '0'
-print netbits
 
 print(decimal(netbits, mask))
