@@ -3,7 +3,6 @@
 '''
 This script takes a address and mask and gives you the subnet range, network, and broadcast addresses
 Enter a subnet as x.x.x.x/mask (no spaces) or as x.x.x.x y.y.y.y
-This does not work for /31 and /32 masks but you shouldn't need this.
 There's no error handling for entering a wrong subnet mask or IP, so please be careful
 
 Used functions because I will eventually add these to a class.
