@@ -1,10 +1,10 @@
 
-line = '0000000100000000010111100'
+line = '0000000100000000010111100' . #Beginning of mac address in binary format.
 
 ipinput = raw_input("Please enter your IP address: ")
 
 IP = ipinput.split('.')
-IP = [int(i) for i in IP[1:]]
+IP = [int(i) for i in IP[1:]] . #we don't care about the first octet because we only take last 23 bits of IP address to find mac
 
 mcast = ''
 macaddr = ''
