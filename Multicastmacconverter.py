@@ -14,13 +14,13 @@ mcast = ''
 macaddr = ''
 
 for i in IP:
-		octet =  bin(i)[2:]
-		while (len(octet) < 8):
-			octet = '0' + octet
-		#print octet
-		mcast += octet
-		#print mcast
-		#print len(mcast)
+	octet =  bin(i)[2:]
+	while (len(octet) < 8):
+		octet = '0' + octet
+	#print octet
+	mcast += octet
+	#print mcast
+	#print len(mcast)
 
 mcast = mcast[1:] #mcast is 24 bit number but mac address conversion only takes last 23 bits.
 line += mcast
