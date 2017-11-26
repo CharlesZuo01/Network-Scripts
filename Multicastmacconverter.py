@@ -3,9 +3,6 @@ This script takes a multicast IP address and finds the multicast mac address.  T
 to binary string, then takes the hex value of every 4 chars in that string to find the mac
 '''
 
-
-
-
 line = '0000000100000000010111100' . #Beginning of mac address in binary format.
 
 ipinput = raw_input("Please enter your IP address: ")
