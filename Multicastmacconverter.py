@@ -5,7 +5,7 @@ to binary string, then takes the hex value of every 4 chars in that string to fi
 
 print "There's no error checking, please be careful and enter IP addresses correctly"
 
-line = '0000000100000000010111100'
+first25 = '0000000100000000010111100' #First 25 bits of multicast mac address 
 
 first = [] #stores the first octet of multicast range, e.g 224,225, 226, etc... used to provide collision addresses
 second = 0 #second octet, will +/- 128 used to provide collision addresses
@@ -37,8 +37,8 @@ for i in IP:
 
 mcast = mcast[1:] #mcast is 24 bit number but mac address conversion only takes last 23 bits.
 
-line += mcast
-mac = [line[i:i+4] for i in range(0, len(line), 4)]
+first25 += mcast
+mac = [first25[i:i+4] for i in range(0, len(first25), 4)]
 for i in mac:
 	macaddr += hex(int(i, 2))[2:]
 
