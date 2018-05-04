@@ -1,7 +1,5 @@
 # Network-Scripts
-Scripts for network automation
-
-The scripts in this repo are used to automate networking tasks.  
+Tools to make day to day stuff easier.  
 
 subnetcalc.py is a subnet calculator
 supernet.py finds the common subnet
